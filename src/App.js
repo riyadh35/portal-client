@@ -42,7 +42,11 @@ function App() {
           <Route index element={<MyAppoinments />}></Route>
           <Route path='review' element={<MyReview />}></Route>
           <Route path='history' element={<MyHistory />}></Route>
-          <Route path='users' element={<RequireAdmin><MyUsers /></RequireAdmin>}></Route>
+          <Route path='users' element={
+            <RequireAdmin>
+              <MyUsers />
+            </RequireAdmin>
+          }></Route>
           <Route path='addDoctors' element={<AddDoctors />}></Route>
           <Route path='manageDoctors' element={<ManageDoctor />}></Route>
           <Route path='payment/:id' element={<Payment />}></Route>
